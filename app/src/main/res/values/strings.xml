@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Word Counter</string>
+    <string name="app_name">WordCounter</string>
+    <string name="input">Type your text</string>
+    <string name="submit">Submit your text</string>
 </resources>

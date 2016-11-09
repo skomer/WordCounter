@@ -1,31 +1,33 @@
 package com.example.user.wordcounter;
 
-import java.util.ArrayList;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 /**
  * Created by user on 08/11/2016.
  */
 
-public class WordCounter {
+public class WordCounter extends AppCompatActivity {
 
-    int wordCount;
-    String text;
-    //protected ArrayList<String> mWords;
-    protected String[] mWords;
+    EditText mInputTextEditText;
+    Button mSubmitButton;
 
-    public WordCounter(String text) {
-        this.text = text;
-        splitTextOnSpaces();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        Log.d("WordCounter", "onCreate() called");
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mInputTextEditText = (EditText) findViewById(R.id.input_text);
+        mSubmitButton = (Button) findViewById(R.id.submit_button);
+
+
     }
 
-    public String[] splitTextOnSpaces() {
-        mWords = this.text.split(" ");
-        return mWords;
-    }
 
-    public int getNumberOfWords() {
-        wordCount = mWords.length;
-        return wordCount;
-    }
-    
+
 }
